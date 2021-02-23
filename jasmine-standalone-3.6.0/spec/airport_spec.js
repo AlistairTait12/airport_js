@@ -3,8 +3,8 @@ describe('Airport', function() {
   var plane;
 
   beforeEach(function() {
-    airport = new Airport();
-    plane = new Plane();
+    airport = new Airport("Gatwick", 5);
+    plane = new Plane("MAK942");
   });
 
   describe('Check instance of class', function() {
@@ -16,7 +16,7 @@ describe('Airport', function() {
 
   describe('#land', function() {
     it('informs air traffic controller when plane has landed', function() {
-      expect(airport.land(plane)).toEqual("");
+      expect(airport.land(plane)).toEqual("MAK942 has successfully landed at Gatwick");
     });
   });
 
