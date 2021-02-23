@@ -11,6 +11,10 @@ class Airport {
   }
 
   take_off(plane) {
+    let index = this.hangar.indexOf(plane.flight_id);
+    if (index > -1) {
+      this.hangar.splice(index, 1);
+    }
     return plane.flight_id + " successfully taken off from " + this.name;
   }
 }

@@ -3,4 +3,3 @@ class Plane {
     this.flight_id = flight_id;
   }
 }
-

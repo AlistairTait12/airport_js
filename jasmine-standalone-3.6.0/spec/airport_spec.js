@@ -21,13 +21,19 @@ describe('Airport', function() {
 
     it('holds a plane', function() {
       airport.land(plane);
+      console.log(airport.hangar[0].flight_id);
       expect(airport.hangar.length).toEqual(1);
     });
   });
-
+  
   describe('#take_off', function() {
     it('informs air traffic controller when plane has taken off', function() {
       expect(airport.take_off(plane)).toEqual("MAK942 successfully taken off from Gatwick");
+    });
+
+    it('also removes corresponding plane from the hangar', function() {
+      airport.take_off(plane);
+      expect(airport.hangar.length).toEqual(0);
     });
   });
 
