@@ -27,7 +27,7 @@ describe('Airport', function() {
 
   describe('#take_off', function() {
     it('informs air traffic controller when plane has taken off', function() {
-      expect(airport.take_off).toEqual("MAK942 successfully taken off from Gatwick");
+      expect(airport.take_off(plane)).toEqual("MAK942 successfully taken off from Gatwick");
     });
   });
 
