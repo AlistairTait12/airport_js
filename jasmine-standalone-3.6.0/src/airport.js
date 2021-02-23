@@ -17,4 +17,12 @@ class Airport {
     }
     return plane.flight_id + " successfully taken off from " + this.name;
   }
+
+  confirm_status(plane) {
+    if (this.hangar.includes(plane.flight_id)) {
+      return plane.flight_id + " is landed";
+    } else {
+      return plane.flight_id + " in flight";
+    }
+  }
 }

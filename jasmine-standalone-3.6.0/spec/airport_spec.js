@@ -37,4 +37,10 @@ describe('Airport', function() {
     });
   });
 
+  describe('#confirm_status', function() {
+    it('allows an air traffic controller to know if plane is landed or in air', function() {
+      expect(airport.confirm_status(plane)).toEqual("MAK942 in flight");
+    });
+  });
+
 });
